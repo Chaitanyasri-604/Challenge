@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Handloom Sarees Shop Dashboard</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f3ec;
+    }
+
+    header {
+      background-color: #a0522d;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #deb887;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #4b2e17;
+      font-weight: bold;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    .dashboard-card {
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 10px 0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .dashboard-card h3 {
+      margin: 0;
+      color: #a0522d;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Handloom Sarees Shop Dashboard</h1>
+  </header>
+  <nav>
+    <a href="#">Orders</a>
+    <a href="#">Products</a>
+    <a href="#">Customers</a>
+    <a href="#">Reports</a>
+  </nav>
+  <main>
+    <div class="dashboard-card">
+      <h3>Total Orders</h3>
+      <p id="totalOrders">0</p>
+    </div>
+    <div class="dashboard-card">
+      <h3>Total Revenue</h3>
+      <p id="totalRevenue">₹0</p>
+    </div>
+    <div class="dashboard-card">
+      <h3>Pending Deliveries</h3>
+      <p id="pendingDeliveries">0</p>
+    </div>
+  </main>
+  <script>
+    const dashboardData = {
+      totalOrders: 128,
+      totalRevenue: 54320,
+      pendingDeliveries: 14
+    };
+
+    document.getElementById("totalOrders").textContent = dashboardData.totalOrders;
+    document.getElementById("totalRevenue").textContent = "₹" + dashboardData.totalRevenue;
+    document.getElementById("pendingDeliveries").textContent = dashboardData.pendingDeliveries;
+  </script>
+</body>
+</html>
