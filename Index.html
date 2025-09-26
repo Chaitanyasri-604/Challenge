@@ -1,0 +1,120 @@
+# Challenge
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Handloom Sarees Order Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f0e3;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #8e44ad;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #f2d7f4;
+      padding: 10px;
+      text-align: center;
+    }
+    nav button {
+      background-color: #8e44ad;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      margin: 0 5px;
+      cursor: pointer;
+    }
+    main {
+      padding: 20px;
+    }
+    .dashboard {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .card {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      flex: 1;
+      min-width: 200px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #ddd;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Handloom Sarees Order Dashboard</h1>
+</header>
+
+<nav>
+  <button onclick="showOrders()">Orders</button>
+  <button onclick="showInventory()">Inventory</button>
+  <button onclick="showCustomers()">Customers</button>
+</nav>
+
+<main>
+  <div class="dashboard" id="dashboard">
+    <div class="card">
+      <h3>Total Orders</h3>
+      <p id="ordersCount">0</p>
+    </div>
+    <div class="card">
+      <h3>Available Stock</h3>
+      <p id="inventoryCount">0</p>
+    </div>
+    <div class="card">
+      <h3>Customers</h3>
+      <p id="customersCount">0</p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  &copy; 2025 Handloom Sarees App
+</footer>
+
+<script>
+  // Mock data
+  let orders = 120;
+  let inventory = 75;
+  let customers = 54;
+
+  function updateDashboard() {
+    document.getElementById('ordersCount').innerText = orders;
+    document.getElementById('inventoryCount').innerText = inventory;
+    document.getElementById('customersCount').innerText = customers;
+  }
+
+  function showOrders() {
+    alert("Showing order list...");
+  }
+
+  function showInventory() {
+    alert("Showing inventory...");
+  }
+
+  function showCustomers() {
+    alert("Showing customer list...");
+  }
+
+  // Initialize dashboard
+  updateDashboard();
+</script>
+
+</body>
+</html>
